@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../uibuilder/images/node-blue.ico">
+
+    <title>Setpoints</title>
+    <meta name="description" content="Setpoints Adjustment">
+
+    <!-- Link to external CSS -->
+    <link type="text/css" rel="stylesheet" href="./index.css" media="all">
+
+    <!-- Supporting Scripts -->
+    <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+
+    <div id="app" class="setpoints-panel">
+        <div class="adjust-controls">
+            <button id="decreaseTemp">-</button>
+            <!-- Replace Vue.js-style binding with a plain span element that JS can manipulate -->
+            <span id="setpointTemperature">32.0 °C</span>
+            <button id="increaseTemp">+</button>
+        </div>
+        <div class="adjust-controls">
+            <button id="decreasePressure">-</button>
+            <!-- Replace Vue.js-style binding with a plain span element that JS can manipulate -->
+            <span id="setpointPressure">1.5 mbar</span>
+            <button id="increasePressure">+</button>
+        </div>
+        <button id="submitSetpoints">Submit</button>
+    </div>
+
+</body>
+
+</html>
