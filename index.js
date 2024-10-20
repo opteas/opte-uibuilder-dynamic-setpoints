@@ -55,14 +55,14 @@ window.onload = function () {
     // Event listeners for temperature adjustment
     document.getElementById('increaseTemp').addEventListener('click', function () {
         if (setpointTemperature < 100) {
-            setpointTemperature = (setpointTemperature + 0.5).toFixed(1);
+            setpointTemperature = parseFloat((setpointTemperature + 0.5).toFixed(1));
             updateSetpointsUI(setpointTemperature, setpointPressure);
         }
     });
 
     document.getElementById('decreaseTemp').addEventListener('click', function () {
         if (setpointTemperature > 0) {
-            setpointTemperature = (setpointTemperature - 0.5).toFixed(1);
+            setpointTemperature = parseFloat((setpointTemperature - 0.5).toFixed(1));
             updateSetpointsUI(setpointTemperature, setpointPressure);
         }
     });
@@ -70,14 +70,14 @@ window.onload = function () {
     // Event listeners for pressure adjustment
     document.getElementById('increasePressure').addEventListener('click', function () {
         if (setpointPressure < 10) {
-            setpointPressure = (setpointPressure + 0.1).toFixed(1);
+            setpointPressure = parseFloat((setpointPressure + 0.1).toFixed(1));
             updateSetpointsUI(setpointTemperature, setpointPressure);
         }
     });
 
     document.getElementById('decreasePressure').addEventListener('click', function () {
         if (setpointPressure > 0) {
-            setpointPressure = (setpointPressure - 0.1).toFixed(1);
+            setpointPressure = parseFloat((setpointPressure - 0.1).toFixed(1));
             updateSetpointsUI(setpointTemperature, setpointPressure);
         }
     });
